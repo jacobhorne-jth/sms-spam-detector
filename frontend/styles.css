@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0fa; /* light blue background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #f8fbff; /* even lighter blue box */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  color: #2c3e50; /* dark blue heading */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #3b4b5a; /* soft blue-gray text */
+}
+
+.safe-word {
+  color: #28a745; /* green for safe */
+  font-weight: bold;
+}
+
+.spam-word {
+  color: #dc3545; /* red for spam */
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db; /* blue button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9; /* darker on hover */
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.ham {
+  color: #28a745; /* green */
+  font-weight: bold;
+}
+
+.spam {
+  color: #dc3545; /* red */
+  font-weight: bold;
+}
