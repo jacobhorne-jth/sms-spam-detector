@@ -3,14 +3,23 @@ from pydantic import BaseModel
 import joblib
 import html
 import re
+import os
 import string
 from nltk.corpus import stopwords
 from fastapi.middleware.cors import CORSMiddleware
 
 
 # Load saved model and vectorizer
-model = joblib.load("../model/spam_detector_model.pkl")
-vectorizer = joblib.load("../model/tfidf_vectorizer.pkl")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+MODEL_PATH = os.path.join(BASE_DIR, "model", "spam_detector_model.pkl")
+VECTORIZER_PATH = os.path.join(BASE_DIR, "model", "tfidf_vectorizer.pkl")
+
+model = joblib.load(MODEL_PATH)
+vectorizer = joblib.load(VECTORIZER_PATH)
+
+#model = joblib.load("../model/spam_detector_model.pkl")
+#vectorizer = joblib.load("../model/tfidf_vectorizer.pkl")
 
 stop_words = set(stopwords.words("english"))
 
