@@ -5,6 +5,7 @@ import html
 import re
 import os
 import string
+import nltk
 from nltk.corpus import stopwords
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -21,7 +22,13 @@ vectorizer = joblib.load(VECTORIZER_PATH)
 #model = joblib.load("../model/spam_detector_model.pkl")
 #vectorizer = joblib.load("../model/tfidf_vectorizer.pkl")
 
-stop_words = set(stopwords.words("english"))
+
+# Make sure stopwords are downloaded
+try:
+    stop_words = set(stopwords.words("english"))
+except LookupError:
+    nltk.download("stopwords")
+    stop_words = set(stopwords.words("english"))
 
 app = FastAPI(title="SMS Spam Detector API")
 
