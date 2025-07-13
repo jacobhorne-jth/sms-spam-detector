@@ -6,7 +6,7 @@ document.getElementById("checkButton").addEventListener("click", async () => {
     return;
   }
 
-  const response = await fetch("http://127.0.0.1:8000/predict", {
+  const response = await fetch("https://sms-spam-api-3g2w.onrender.com/predict", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
