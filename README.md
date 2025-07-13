@@ -1,2 +1,2 @@
 # sms-spam-detector
-A Python FastAPI application that detects SMS spam with Logistic Regression, combining TF-IDF text analysis and engineered features like phone number detection and spam keywords.
+A machine learning web app that classifies SMS messages as spam or ham using TF-IDF vectorization and custom text features.
