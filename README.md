@@ -2,6 +2,14 @@
 A machine learning web app that classifies SMS messages as spam or ham using TF-IDF vectorization and custom text features.
 
 **Live Demo: https://sms-spam-checker.netlify.app**  
+
+_Note on Loading Time_
+```text
+Because the backend API is hosted on a free Render service, it automatically goes to sleep after periods of
+inactivity. If you visit the app after it has been idle, the first request can take up to 30 seconds to
+respond while the server wakes up. Subsequent requests will be much faster.
+```
+
 - Frontend: [https://sms-spam-checker.netlify.app](https://sms-spam-checker.netlify.app)
 - Backend API: [https://sms-spam-api-3g2w.onrender.com/predict](https://sms-spam-api-3g2w.onrender.com/predict)
 
