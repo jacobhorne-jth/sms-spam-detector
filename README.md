@@ -75,7 +75,7 @@ requirements.txt # Python dependencies
 1. Clone the repository
 
 ```text
-git clone https://github.com/YOUR_USERNAME/sms_spam_detector.git
+git clone https://github.com/jacobhorne-jth/sms_spam_detector.git
 cd sms_spam_detector
 ```
 2. Install dependencies
